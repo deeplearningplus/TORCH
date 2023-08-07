@@ -53,7 +53,7 @@ class TORCH(nn.Module):
         size = self.size_dict[size_arg]
 
         self.sex_embedding = nn.Embedding(2, size[1])    # Male: 0, Female: 1
-        self.age_embedding = nn.Embedding(120, size[1])  # Age: integer value
+        self.age_embedding = nn.Embedding(100, size[1])  # Age: integer value
         self.origin_embedding = nn.Embedding(2, size[1]) # 腹水(Ascites): 0, 胸水(pleural effusion): 1
 
         self.attention_net = nn.Sequential(
